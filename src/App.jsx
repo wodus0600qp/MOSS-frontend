@@ -34,126 +34,38 @@ import SearchPage from "./pages/common/SearchPage";
 import ReportPage from "./pages/common/ReportPage";
 
 const router = createBrowserRouter([
-  // 인증 페이지
-  {
-    path: "/",
-    element: <LoginPage />,
-  },
-  {
-    path: "/signup",
-    element: <SignupPage />,
-  },
-  {
-    path: "/signup/user",
-    element: <UserSignupPage />,
-  },
-  {
-    path: "/signup/owner",
-    element: <OwnerSignupPage1 />,
-  },
-  {
-    path: "/owner-signup/2",
-    element: <OwnerSignupPage2 />,
-  },
-  {
-    path: "/owner-signup/3",
-    element: <OwnerSignupPage3 />,
-  },
-  {
-    path: "/find-account",
-    element: <AccountHelpPage />,
-  },
-
-  // 일반 페이지
+  { path: "/", element: <LoginPage /> },
+  { path: "/signup", element: <SignupPage /> },
+  { path: "/signup/user", element: <UserSignupPage /> },
+  { path: "/signup/owner", element: <OwnerSignupPage1 /> },
+  { path: "/owner-signup/2", element: <OwnerSignupPage2 /> },
+  { path: "/owner-signup/3", element: <OwnerSignupPage3 /> },
+  { path: "/find-account", element: <AccountHelpPage /> },
   {
     element: <Layout />,
     children: [
-      {
-        path: "/main",
-        element: <MainPage />,
-      },
-      {
-        path: "/search",
-        element: <SearchPage />,
-      },
-      {
-        path: "/cafes",
-        element: <SearchPage />,
-      },
-      {
-        path: "/cafe/:id",
-        element: <DetailPage />,
-      },
-      {
-        path: "/place/:id",
-        element: <DetailPage />,
-      },
-      {
-        path: "/detail",
-        element: <DetailPage />,
-      },
-      {
-        path: "/mypage",
-        element: <MyPage />,
-      },
-      {
-        path: "/my-reviews",
-        element: <MyReviewsPage />,
-      },
-      {
-        path: "/favorite",
-        element: <FavoritePage />,
-      },
-      {
-        path: "/favorites",
-        element: <FavoritePage />,
-      },
-      {
-        path: "/bookmarks",
-        element: <FavoritePage />,
-      },
-      {
-        path: "/reports",
-        element: <ReportPage />,
-      },
-      {
-        path: "/my-report",
-        element: <ReportPage />,
-      },
-      {
-        path: "/report",
-        element: <ReportPage />,
-      },
-      {
-        path: "/review/write",
-        element: <ReviewWritePage />,
-      },
-
-      // 업주 페이지
-      {
-        path: "/owner/dashboard",
-        element: <DashboardPage />,
-      },
-      {
-        path: "/owner/review",
-        element: <ReviewPage />,
-      },
-      {
-        path: "/owner/event",
-        element: <EventPage />,
-      },
-      {
-        path: "/owner/store",
-        element: <StorePage />,
-      },
+      { path: "/main", element: <MainPage /> },
+      { path: "/search", element: <SearchPage /> },
+      { path: "/cafes", element: <SearchPage /> },
+      { path: "/cafe/:id", element: <DetailPage /> },
+      { path: "/place/:id", element: <DetailPage /> },
+      { path: "/detail", element: <DetailPage /> },
+      { path: "/mypage", element: <MyPage /> },
+      { path: "/my-reviews", element: <MyReviewsPage /> },
+      { path: "/favorite", element: <FavoritePage /> },
+      { path: "/favorites", element: <FavoritePage /> },
+      { path: "/bookmarks", element: <FavoritePage /> },
+      { path: "/reports", element: <ReportPage /> },
+      { path: "/my-report", element: <ReportPage /> },
+      { path: "/report", element: <ReportPage /> },
+      { path: "/review/write", element: <ReviewWritePage /> },
+      { path: "/owner/dashboard", element: <DashboardPage /> },
+      { path: "/owner/review", element: <ReviewPage /> },
+      { path: "/owner/event", element: <EventPage /> },
+      { path: "/owner/store", element: <StorePage /> },
     ],
   },
-
-  // 존재하지 않는 주소
-  {
-    path: "*",
-    element: <Navigate to="/" replace />,
-  },
+  { path: "*", element: <Navigate to="/" replace /> },
 ]);
 
 export default function App() {
